@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>My Page</title>
+ </head>
+<body>
+
+<h2>Hidden things by Rasagna Reddy Banda</h2>
+
+<form>
+    <label for="form1_word">Enter the secret word</label>
+    <input type ="password" id="form1_word" name="form1_word" min=10 max=50 step=2 value="Secret"> <br>
+
+    <label for="form1_guess">Enter a guess</label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+
+<p id="result">Checkthe result </p>
+
+<script> 
+var correct = 0;
+var wrong= 0;
+function processGuess(){
+    console.log("Getting form values")
+    word = document.getElementById("form1_word").value
+    guess = document.getElementById("form1_guess").value
+    //confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(word==guess){
+        correct+=1;
+        alert("Congratulations");
+        out.innerHTML = "Success Attempts: " + correct
+    } else {
+        wrong+=1;
+        alert("Sorry");
+        out.innerHTML = "Wrong Attempts: " + wrong
+    }
+}
+</script>
+<div class="container">
+    <img id="myPlant" src="Bamboo plant.jpg" alt="connection error" width="200" height="200" onclick="rotateImage()">
+</div>
+<script>
+    var count = 0;
+    function rotateImage(){
+        switch(count){
+            case 0: 
+                count+=1;
+                document.getElementById("myPlant").src = "Bamboo plant.jpg"
+                break;
+            case 1:
+                count+=1;
+                document.getElementById("myPlant").src = "Abelia Plant.jpg"
+                break;
+            case 2:
+                count+=1;
+                document.getElementById("myPlant").src = "Abies Plant.jpg"
+                break;
+            default:
+                count = 0
+                document.getElementById("myPlant").src = "Bamboo plant.jpg"
+        }
+    }
+</script>
+</body>
+</html> 
