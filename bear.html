@@ -8,37 +8,38 @@
 <body>
 
 <h1>Rasagna Reddy Banda builds a bear</h1>
+<div style="padding: 8mm;">
 
 <form>
     <input type ="checkbox" id="checkbox_one" name="checkbox_one" value="hat">
-    <label for="checkbox_one">hat </label><br>
+    <label for="checkbox_one" style="font-family: cursive;">hat </label><br>
 
     <input type ="checkbox" id="checkbox_two" name="checkbox_two" value="scarf">
-    <label for="checkbox_two">scarf </label><br>
+    <label for="checkbox_two" style="font-family: cursive;">scarf </label><br>
 
     <input type ="checkbox" id="checkbox_three" name="checkbox_three" value="shirt">
-    <label for="checkbox_three">shirt </label><br>
+    <label for="checkbox_three" style="font-family: cursive;">shirt </label><br>
 
     <br>
 
-    <input type="button" onclick="startBear()" value="Start a bear">
+    <input type="button" onclick="startBear()" value="Start a bear" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
     <br>
     <br>
 </form>
 <form>
-    <label for = "t1">Enter a property</label>
+    <label for = "t1" style="font-family: cursive;">Enter a property</label>
     <input type ="text" id = "t1" name ="t1" value ="color"><br>
 
     <br>
 
-    <label for = "t2">Enter a value</label>
+    <label for = "t2" style="font-family: cursive;">Enter a value</label>
     <input type ="text" id = "t2" name ="t2"><br>
 
     <br>
 
-    <input type ="button" onclick="updatebear()" value ="Update the bear">
+    <input type ="button" onclick="updatebear()" value ="Update the bear" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
 </form>
-<p id="Results">This text will be replaced </p>
+<p id="Results" style="font-family: cursive;">This text will be replaced </p>
 <script> 
 
 var my_bear = {}
@@ -69,5 +70,6 @@ function updatebear(){
         console.log(my_bear)
     }
 </script>
+</div>
 </body>
 </html> 

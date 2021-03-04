@@ -7,18 +7,25 @@
 
 <h2>Hidden things by Rasagna Reddy Banda</h2>
 
+<div style="padding: 8mm;">
+
 <form>
-    <label for="form1_word">Enter the secret word</label>
+    <label for="form1_word" style="font-family: cursive;">Enter the secret word</label>
     <input type ="password" id="form1_word" name="form1_word" min=10 max=50 step=2 value="Secret"> <br>
 
-    <label for="form1_guess">Enter a guess</label>
+    <br>
+
+    <label for="form1_guess"style="font-family: cursive;">Enter a guess</label>
     <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
 
-    <input type="button" onclick="processGuess()" value="Check the guess">
+    <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess" style="font-family: sans-serif;">
 </form>
+<br>
 
 
-<p id="result">Checkthe result </p>
+<p id="result" style="font-family: cursive;">Checkthe result </p>
 
 <script> 
 var correct = 0;
@@ -27,7 +34,7 @@ function processGuess(){
     console.log("Getting form values")
     word = document.getElementById("form1_word").value
     guess = document.getElementById("form1_guess").value
-    //confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
     
     out = document.getElementById("result")
     if(word==guess){
@@ -66,5 +73,6 @@ function processGuess(){
         }
     }
 </script>
+</div>
 </body>
 </html> 

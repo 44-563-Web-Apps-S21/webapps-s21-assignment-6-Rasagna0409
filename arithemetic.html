@@ -2,29 +2,39 @@
 <html>
     <head>
         <title> Computation </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 
     </head>
  
 <body>
 
 <h2>Rasagna Reddy Computes</h2>
-
+<div style="padding: 8mm;">
 <form>
-    <label for="number_1">Enter a number </label>
+    <label for="number_1" style="font-family:cursive;">Enter a number </label>
     <input type ="number" id="number_1" name="number_1" min=10 max=50 step=2 value=10> <br>
 
     <br>
 
-    <label for="number_2">Enter a number </label>
+    <label for="number_2" style="font-family:cursive;">Enter a number </label>
     <input type ="number" id="number_2" name="number_2" autofocus value=2> <br>
 
     <br>
 
-    <input type="button" onclick="permutations()" value="compute">
+    <input type="button" onclick="permutations()" value="compute" class="btn btn-success">
+
+   <br>
+
 </form>
 
+<br>
 
-<p id="Results">This text will be replaced </p>
+
+<p id="Results" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">This text will be replaced </p>
 
 <script> 
 
@@ -53,7 +63,7 @@ function permutations (){
 
 
 </form>
-<p id = "res">Results of Radio buttons will be shown here</p>
+<p id = "res" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Results of Radio buttons will be shown here</p>
 <script>
     function processRadio(){
         num1 = document.getElementById("number_1").value
@@ -84,5 +94,6 @@ function permutations (){
 
     }
 </script>
+</div>
 </body>
 </html> 
