@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Computation </title>
+
+    </head>
+ 
+<body>
+
+<h2>Rasagna Reddy Computes</h2>
+
+<form>
+    <label for="number_1">Enter a number </label>
+    <input type ="number" id="number_1" name="number_1" min=10 max=50 step=2 value=10> <br>
+
+    <label for="number_2">Enter a number </label>
+    <input type ="number" id="number_2" name="number_2" autofocus value=2> <br>
+
+    <input type="button" onclick="permutations()" value="compute">
+</form>
+
+
+<p id="Results">This text will be replaced </p>
+
+<script> 
+
+function permutations (){
+    
+    num1 = document.getElementById("number_1").value
+    num2 = document.getElementById("number_2").value
+    let product =1
+    for( first =num1 ; first>=(num1-num2 +1); first--)
+    {
+        product = product * first
+    }
+    
+    document.getElementById("Results").innerHTML = num1 + " permute "+num2 +" should be "+product
+}
+</script>
+<form>
+    <input type ="radio" id = "add" name = "arithemetic_opereration" onclick="processRadio()">
+    <label for ="add" >+</label><br>
+    <input type ="radio" id = "minus" name = "arithemetic_opereration" onclick="processRadio()">
+    <label for ="minus" >-</label><br>
+    <input type ="radio" id = "multiply" name = "arithemetic_opereration" onclick="processRadio()">
+    <label for ="multiply" >*</label><br>
+    <input type ="radio" id = "devide" name = "arithemetic_opereration" onclick="processRadio()">
+    <label for ="devide" >/</label><br>
+
+
+</form>
+<p id = "res">Results of Radio buttons will be shown here</p>
+<script>
+    function processRadio(){
+        num1 = document.getElementById("number_1").value
+         num2 = document.getElementById("number_2").value
+         result = 0
+         text = ""
+        if(document.getElementById("add").checked == true)
+        {
+            result = +num1 + +num2
+            text = "sum of " +num1+" and " +num2+ " is "+result
+        }
+       else if(document.getElementById("minus").checked == true)
+        {
+            result = num1 - num2
+            text = "Difference of " +num1+" and " +num2+ " is "+result
+        }
+        else if(document.getElementById("multiply").checked == true)
+        {
+            result = num1  * num2
+            text = "Product of " +num1+" and " +num2+ " is "+result
+        }
+        else if(document.getElementById("devide").checked =true)
+        {
+            result = num1/num2
+            text = "Division of " +num1+" and " +num2+ " is "+result
+        }
+        document.getElementById("res").innerHTML = text
+
+    }
+</script>
+</body>
+</html> 
